@@ -1,0 +1,8 @@
+.headbar{
+    flex-direction: row;
+    float: right;
+}
+
+.image{
+    margin-left: 20pt;
+}
