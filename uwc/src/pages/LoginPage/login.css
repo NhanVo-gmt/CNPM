@@ -113,8 +113,10 @@
     opacity: 0.4; 
 }
 
-.logo{
+.logo-login{
     position: absolute; 
-    top:650px;
-    left:290px;
+    top:580px;
+    left:233px;
+    width:200px;
+    height: 180px;
 }

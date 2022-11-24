@@ -32,7 +32,7 @@ function LoginPage() {
       <img
             src={logo}
             alt=""
-            className="logo"
+            className="logo-login"
       />
     </div>
   );
