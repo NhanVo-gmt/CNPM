@@ -25,11 +25,7 @@ function NavBar() {
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
-              <img
-                src={logoBKU}
-                alt=""
-                className="logo"
-              />
+              <img src={logoBKU} alt="" className="logo" />
               <span className="app-name">UWC</span>
               <Link to="#" className="menu-bars">
                 <AiIcons.AiOutlineClose />
