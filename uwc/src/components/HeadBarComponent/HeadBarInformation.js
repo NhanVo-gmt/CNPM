@@ -1,13 +1,21 @@
 import "./HeadBar.css";
+import chat from "../../assets/chat.jpg"
+import language from "../../assets/language.png"
+import calendar from "../../assets/calendar.png"
+import notification from "../../assets/notification.jpg"
+import ava from "../../assets/ava.png"
 
 function HeadBarInformation() {
     return (
       <div className='headbar'>
         <div>
-          <img className="image" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Status_iucn_EN_icon_blank.svg/1024px-Status_iucn_EN_icon_blank.svg.png" alt = "Notification" width = "50px"></img>
-          <img className="image"  src = "https://cdn-icons-png.flaticon.com/512/55/55281.png" alt = "Notification" width = "50px"></img>
-          <img className="image"  src = "https://cdn-icons-png.flaticon.com/512/1380/1380370.png" alt = "Notification" width = "50px"></img>
-          <img className="image"  src = "https://as2.ftcdn.net/v2/jpg/03/64/76/01/1000_F_364760110_JP1XMi9xkg9N8a6exTywUYpr2ETXdMem.jpg" alt = "Notification" width = "50px"></img>
+          <img className="avatar" src = {ava} alt = "Avatar" ></img>
+        </div>
+        <div className='imageContainer'>
+          <img className="image" src = {language} alt = "Language" ></img>
+          <img className="image" src = {calendar} alt = "Calendar" ></img>
+          <img className="image" src = {notification} alt = "Notification" ></img>
+          <img className="image" src = {chat} alt = "Chat" ></img>
         </div>
       </div>
     )
