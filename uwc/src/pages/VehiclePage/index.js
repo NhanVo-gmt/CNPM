@@ -6,10 +6,7 @@ function VehiclePage() {
   return (
     <div className='vehicle'>
       <NavBar />
-      Vehicle Page
-      <VehicleInformationComponent>
-        
-      </VehicleInformationComponent>
+      <VehicleInformationComponent />
     </div>
   )
 }
