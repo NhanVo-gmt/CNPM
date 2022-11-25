@@ -2,7 +2,7 @@ import "./HeadBar.css";
 import chat from "../../assets/chat.jpg"
 import language from "../../assets/language.png"
 import calendar from "../../assets/calendar.png"
-import notification from "../../assets/notification.jpg"
+import notification from "../../assets/notification.png"
 import ava from "../../assets/ava.png"
 
 function HeadBarInformation() {

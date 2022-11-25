@@ -1,14 +1,14 @@
 .imageContainer{
     position: absolute; 
     top: 20px; 
-    right: -750px; 
+    right: -780px; 
     width: 1176px; 
     height: 84px; 
 }
 
 .image{
     margin-left: 20pt;
-    width: 50px;
+    width: 40px;
 }
 
 .avatar {
