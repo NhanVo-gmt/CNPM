@@ -1,0 +1,10 @@
+[{"name":"Eli Klimshuk","role":"Collector","overview":"Collecting","status":"Assigned"},
+{"name":"Cher Jermin","role":"Collector","overview":"Chilling","status":"Assigned"},
+{"name":"Elwyn Witch","role":"Collector","overview":"Chilling","status":"Assigned"},
+{"name":"Stefa Echalier","role":"Janitor","overview":"Collecting","status":"Unassigned"},
+{"name":"Maggie Darragh","role":"Collector","overview":"Cleaning","status":"Unavailable"},
+{"name":"Desirae Groll","role":"Janitor","overview":"Chilling","status":"Unavailable"},
+{"name":"Salomone Girodier","role":"Collector","overview":"Cleaning","status":"Unavailable"},
+{"name":"Culley Simonot","role":"Janitor","overview":"Collecting","status":"Unavailable"},
+{"name":"Celina Marskell","role":"Collector","overview":"Cleaning","status":"Unassigned"},
+{"name":"Agnella Alten","role":"Collector","overview":"Chilling","status":"Assigned"}]

@@ -1,20 +1,15 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import routes from "./routes";
+import {BasicTable} from "./components/Table"
+import NavBar from "./components/NavBar";
+import { SideBar } from "./components/SideBar";
+
 function App() {
   return (
-    <div>
-      <Routes>
-        {routes &&
-          routes.map((route) => {
-            return (
-              <Route
-                path={route.path}
-                element={<route.component/>}
-              />
-            );
-          })}
-      </Routes>
+    <div className="App">
+      <NavBar/>
+      <BasicTable/>
     </div>
   );
 }
