@@ -2,7 +2,7 @@ table {
   font-family: "Montserrat";
   justify-content: space-between;
   border-collapse: collapse;
-  width: 100%; 
+  width: 86.5%; 
   height: 50px;
 }
 
@@ -39,10 +39,10 @@ table th {
 }
 
 .content {
-  width: 1200px;
-  height: 600px;
+  width: 90%;
+  height: 830px;
   position: absolute; /*Can also be `fixed`*/
-  left: 0;
+  left: 250px;
   right: 0;
   top: 0;
   bottom: 0;
