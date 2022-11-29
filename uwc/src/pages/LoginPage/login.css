@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.cover{
+    position: absolute; 
+    top: 0px; 
+    right: 0px; 
+    width: 1050px; 
+    height: 100vh; 
+}
+
+.container {
+    position: fixed; 
+    top: 140px; 
+    left: 55px; 
+    width: 544px; 
+    height: 410px; 
+    background: #FFFFFFFF; /* white */
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.header {
+    position: absolute; 
+    top: 20px; 
+    left: 198px; 
+    font-family: Poppins; /* Heading */
+    font-size: 40px; 
+    line-height: 56px; 
+    font-weight: 600;
+    color: #171A1FFF; /* neutral-900 */
+}
+
+/* Textbox 9 */
+.textbox {
+    position: absolute; 
+    top: 104px; 
+    left: 29px; 
+    opacity: 1; 
+}
+.textbox .form-input {
+    width: 488px; 
+    height: 44px; 
+    padding-left: 16px; 
+    padding-right: 16px; 
+    font-family: Poppins; /* Body */
+    font-size: 16px; 
+    background: #FFFFFFFF; /* white */
+    border-radius: 12px; /* border-m */
+    border-width: 2px; 
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.textbox .label {
+    font-size: 16px; 
+    line-height: 26px; 
+    font-family: Poppins;
+    font-weight: 600;
+    padding-left: 18px; 
+}
+  /* hover */
+.textbox .form-input:hover {
+    color: #BCC1CAFF; /* neutral-400 */
+    background: #FFFFFFFF; /* white */
+}
+  /* focused */
+.textbox input:focused {
+    color: #BCC1CAFF; /* neutral-400 */
+    background: #FFFFFFFF; /* white */
+}
+  /* disabled */
+.textbox .form-input:disabled {
+    color: #BCC1CAFF; /* neutral-400 */
+    background: #FFFFFFFF; /* white */
+    border-color: #9095A0FF; /* neutral-500 */
+}
+.textbox :disabled + .icon, .textbox :disabled + .icon + .icon {
+    fill: #171A1FFF; /* neutral-900 */
+}
+
+
+.button {
+    position: absolute; 
+    top: 190px; 
+    left: 65px; 
+    width: 359px; 
+    height: 44px; 
+    padding: 0 16px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: Poppins; /* Body */
+    font-size: 16px; 
+    line-height: 26px; 
+    color: #FFFFFFFF; /* white */
+    background: #139CFFFF; /* primary-500 */
+    opacity: 1; 
+    border: none; 
+    border-radius: 12px; /* border-m */
+}
+  /* Hover */
+.button:hover {
+    color: #FFFFFFFF; /* white */
+    background: #007FDAFF; /* primary-600 */
+}
+  /* Pressed */
+.button:hover:active {
+    color: #FFFFFFFF; /* white */
+    background: #006FBEFF; /* primary-650 */
+}
+  /* Disabled */
+.button:disabled {
+    opacity: 0.4; 
+}
+
+.logo-login{
+    position: absolute; 
+    top:580px;
+    left:233px;
+    width:200px;
+    height: 180px;
+}

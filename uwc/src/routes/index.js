@@ -4,8 +4,13 @@ import WorkerPage from "../pages/WorkerPage";
 import VehiclePage from "../pages/VehiclePage";
 import MCPPage from "../pages/MCPPage";
 import SettingsPage from "../pages/SettingsPage";
+import { Navigate } from "react-router-dom";
 
 const routes = [
+    {
+        component: () => <Navigate to="/login" />,
+        path: "/",
+    },
     {
         component: LoginPage,
         path: "/login",
