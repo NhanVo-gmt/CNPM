@@ -8,9 +8,10 @@ import { SideBar } from "./SideBar";
 import "./NavBar.css";
 
 function NavBar() {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
 
   const showSidebar = () => setSidebar(!sidebar);
+
 
   return (
     <>
@@ -26,7 +27,11 @@ function NavBar() {
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
               <img src={logoBKU} alt="" className="logo" />
-              <span className="app-name">UWC</span>
+
+              <Link to="/dashboard" style={{ textDecoration: 'none' }}>
+                <span className="app-name" style={{marginLeft:"0px"}}>UWC</span>
+              </Link>
+
               <Link to="#" className="menu-bars">
                 <AiIcons.AiOutlineClose />
               </Link>

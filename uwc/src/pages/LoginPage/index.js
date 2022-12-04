@@ -2,14 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import cover from "../../assets/cover.png";
 import "./login.css";
-import logo from "../../assets/logo.png";
 
 function LoginPage() {
   return (
-    <div className="login">
+    <div >
+      <div style={{backgroundImage:`url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/1200px-HCMUT_official_logo.png)`, width:"150px", height:"150px", backgroundSize:"cover"}}/>
       <img src={cover} alt="" className="cover" />
       <div className="container">
-        <p className="header">Sign in</p>
+        <div style={{padding:"50px 0px", fontSize:"xx-large", display:"flex", justifyContent:"center"}}>
+          <div style={{fontFamily:"Poppins", fontWeight:"600"}}>SIGN IN</div>
+        </div>
         <form method="POST" className="textbox">
           <label for="name" className="label">
             Username
@@ -40,7 +42,7 @@ function LoginPage() {
           </Link>
         </form>
       </div>
-      <img src={logo} alt="" className="logo-login" />
+      
     </div>
   );
 }

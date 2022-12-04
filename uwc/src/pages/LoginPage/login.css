@@ -10,7 +10,7 @@
 
 .container {
     position: fixed; 
-    top: 140px; 
+    top: 160px; 
     left: 55px; 
     width: 544px; 
     height: 410px; 
@@ -38,7 +38,7 @@
     opacity: 1; 
 }
 .textbox .form-input {
-    width: 488px; 
+    width: 90%; 
     height: 44px; 
     padding-left: 16px; 
     padding-right: 16px; 

@@ -24,8 +24,8 @@ export const SideBar = [
         class_name: 'nav-text'
     },
     {
-        title: 'Settings',
-        path: '/setting',
+        title: 'Create Route',
+        path: '/mcp/planningRoute',
         icon: <AiIcons.AiOutlineSetting />,
         class_name: 'nav-text'
     },

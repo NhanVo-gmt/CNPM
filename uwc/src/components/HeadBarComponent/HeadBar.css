@@ -1,9 +1,9 @@
 .imageContainer{
     position: absolute; 
-    top: 20px; 
-    right: -780px; 
-    width: 1176px; 
-    height: 84px; 
+    top: 0px; 
+    right: 0px; 
+    display: flex;
+    align-items: center;
 }
 
 .image{
