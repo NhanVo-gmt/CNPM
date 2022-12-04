@@ -9,7 +9,7 @@
 }
 
 .container {
-    position: fixed; 
+    position: absolute; 
     top: 160px; 
     left: 55px; 
     width: 544px; 
