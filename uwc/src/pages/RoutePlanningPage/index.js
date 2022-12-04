@@ -1,8 +1,7 @@
 import NavBar from "../../components/NavBar"
 import HeadBarInformation from "../../components/HeadBarComponent/HeadBarInformation"
 import { Container, SingleNumber } from "../WorkerPage/styled.ts"
-
-
+import { useState } from "react"
 
 
 const mcpArray = [
@@ -84,13 +83,55 @@ const mcpArray = [
 
 const RoutePlanningPage = ()=>{
 
+    const [first,updateFirst] = useState(false)
+    const [second,updateSecond]= useState(false)
+    const [third,updateThird]= useState(false)
+    const [fourth,updateFourth]=useState(false)
+    const [fifth,updateFifth]=useState(false)
+    const [sixth,updateSixth]=useState(false)
+    const [seventh,updateSeventh]=useState(false)
+    const [eighth, updateEigth]=useState(false)
+    const [routeName,updateRouteName] = useState("Fill in route name")
 
-    const arrayToDisplay = mcpArray.map((element)=>{
+    const SingleChoseneComponent = (props)=>{
         return(
-          // <div style={{display:"flex", borderBottom:"solid", borderLeft:"solid", borderRight:"solid",borderRadius:"10px", width:"100%"}}>
+          <div style={{marginLeft:"5px",display:"flex", justifyContent:"center", alignItems:"center",width:"70px", height:"30px", borderRadius:"10px",border:"solid"}}>
+            <div>
+              {props.id}
+            </div>
+          </div>
+        )
+    }
+
+
+    const arrayToDisplay = mcpArray.map((element,index)=>{
+        return(
+          
           <Container>
             <div style={{width:"10%", height:"50px",display:"flex", alignItems:"center", justifyContent:"center"}}>
-              <input type="checkbox" style={{width:"20px", height:"20px"}}>
+              <input type="checkbox" 
+              checked={
+                index===0? first  :
+                index===1? second :
+                index===2? third :
+                index===3? fourth:
+                index===4? fifth:
+                index===5? sixth:
+                index===6? seventh:
+                eighth
+              }
+              onClick={()=>{
+                if (index===0){updateFirst(!first)}
+                if (index===1){updateSecond(!second)}
+                if (index===2){updateThird(!third)}
+                if (index===3){updateFourth(!fourth)}
+                if (index===4){updateFifth(!fifth)}
+                if (index===5){updateSixth(!sixth)}
+                if (index===6){updateSeventh(!seventh)}
+                if (index===7){updateEigth(!eighth)}
+                // isChosen[index]= !isChosen[index]
+              }} 
+              style={{width:"20px", height:"20px"}}>
                 
               </input>
             </div>  
@@ -229,29 +270,55 @@ const RoutePlanningPage = ()=>{
               </div>  
            
 
-            <div style={{marginLeft:"250px",width:"calc(100% - 250px)", position:"relative", paddingTop:"10px", display:"flex", justifyContent:"end"}}>
-              <button style={{position:"relative",right:"50px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"40px", backgroundColor:"dodgerblue", fontFamily:"Poppins"}}>
+            {/* <div style={{marginLeft:"250px",width:"calc(100% - 250px)", position:"relative", paddingTop:"10px", display:"flex", justifyContent:"end"}}>
+              <button onClick={()=>{
+                //console.log(isChosen);
+                //updateRenderArray(isChosen)
+                //updateIsChosen([false,false,false,false,false,false,false,false])
+                }} style={{position:"relative",right:"50px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"40px", backgroundColor:"dodgerblue", fontFamily:"Poppins"}}>
                 Add To List
               </button>
-            </div>
+            </div> */}
             {/* //this is thin line/// */}
             <div style={{marginLeft:"250px", height:"10px",width:"50%", position:"relative",left:"200px" ,borderBottom:"solid", borderWidth:"thin"}}></div>
             {/* ///////////////////// */}
             <div style={{display:'flex', marginLeft:"250px", position:"relative", top:"30px"}}>
               <div style={{display:"flex", flexDirection:"column", paddingRight:"40px"}}>
                 <label style={{paddingBottom:"5px"}}>Current Route</label>
-                <input type="text" style={{height:"30px", borderRadius:"5px", paddingLeft:"5px", width:"220px"}}></input>
+                <div type="text" style={{display:"flex", alignItems:"center" ,flexWrap:"wrap",height:"40px", borderRadius:"5px",border:"solid",borderWidth:"2px", paddingLeft:"5px", width:"400px"}}>
+                  {first? <SingleChoseneComponent id={mcpArray[0].id}/>: <div/>}
+                  {second? <SingleChoseneComponent id={mcpArray[1].id}/>: <div/>}
+                  {third? <SingleChoseneComponent id={mcpArray[2].id}/>: <div/>}
+                  {fourth? <SingleChoseneComponent id={mcpArray[3].id}/>: <div/>}
+                  {fifth? <SingleChoseneComponent id={mcpArray[4].id}/>: <div/>}
+                  {sixth? <SingleChoseneComponent id={mcpArray[5].id}/>: <div/>}
+                  {seventh? <SingleChoseneComponent id={mcpArray[6].id}/>: <div/>}
+                  {eighth? <SingleChoseneComponent id={mcpArray[7].id}/>: <div/>}
+                </div>
               </div>
 
               
-              <button style={{fontFamily:"Poppins",position:"absolute",top:"70px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"30px", backgroundColor:"black",color:"white"}}>
+              <button 
+              //onClick={()=>{updateIsChosen([false,false,false,false,false,false,false,false]);                    
+              //  updateRenderArray([false,false,false,false,false,false,false,false])}} 
+                onClick={()=>{
+                  updateFirst(false);
+                  updateSecond(false);
+                  updateThird(false);
+                  updateFourth(false);
+                  updateFifth(false);
+                  updateSixth(false);
+                  updateSeventh(false);
+                  updateEigth(false);
+                }}
+                style={{fontFamily:"Poppins",position:"absolute",top:"80px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"30px", backgroundColor:"black",color:"white"}}>
                 Clear
               </button>
              
 
               <div style={{display:"flex", flexDirection:"column"}}>
                 <label style={{paddingBottom:"5px"}}>Route Name</label>
-                <input type="text" style={{height:"30px", borderRadius:"5px", paddingLeft:"5px", width:"220px"}}></input>
+                <input value={routeName} onClick={()=>{if (routeName ==="Fill in route name"){ updateRouteName('')}}} onChange={(e)=>{updateRouteName(e.currentTarget.value)}} type="text" style={{height:"40px", borderRadius:"5px", paddingLeft:"5px", width:"220px"}}></input>
               </div>
             </div>
 
@@ -298,7 +365,7 @@ const RoutePlanningPage = ()=>{
               <button style={{position:"relative",right:"50px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"40px", fontFamily:"Poppins"}}>
                 Cancel
               </button>
-              <button style={{position:"relative",right:"50px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"40px", backgroundColor:"dodgerblue", fontFamily:"Poppins"}}>
+              <button onClick={()=>{alert("Assign Successfully")}} style={{position:"relative",right:"50px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"40px", backgroundColor:"dodgerblue", fontFamily:"Poppins"}}>
                 Assign
               </button>
             </div>
