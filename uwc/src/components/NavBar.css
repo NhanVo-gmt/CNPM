@@ -17,13 +17,14 @@
 .menu-bars {
   display: flex;
   justify-content: center;
-  margin-left: 1.5rem;
+  margin-left: 10px;
   font-size: 2rem;
   color: #ffffffff;
   background: none;
 }
 
 .app-name {
+  font-family: Poppins;
   display: flex;
   justify-content: center;
   font-size: 36px;
@@ -47,10 +48,11 @@
 .nav-menu.active {
   left: 0;
   transition: 350ms;
+  font-family: Poppins;
 }
 
 .nav-text {
-  display: flex;
+  /* display: flex; */
   justify-content: flex-start;
   align-items: center;
   padding: 8px 0px 8px 16px;
@@ -83,6 +85,8 @@
 
 .nav-menu-items {
   width: 100%;
+  position: relative;
+  left:-25px;
 }
 
 .navbar-toggle {
