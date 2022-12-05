@@ -8,6 +8,7 @@ import { Navigate } from "react-router-dom";
 import RoutePlanningPage from "../pages/RoutePlanningPage";
 import SingleVehiclePage from "../pages/SingleVehiclePage";
 import SingleMCPPage from "../pages/SingleMCPPage";
+import CollectorPage from "../pages/CollectorPage";
 //3 more page
 
 
@@ -50,7 +51,12 @@ const routes = [
     {
         component: SingleMCPPage,
         path: "/mcp/singleMCP"
+    },
+    {
+        component: CollectorPage,
+        path: "/employee"
     }
+
 
 ]
 export default routes

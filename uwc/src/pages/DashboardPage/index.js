@@ -43,14 +43,17 @@ function DashboardPage() {
 
   
   return (
-    <div className='dashboard' style={{fontFamily:"Poppins"}}>
+     
+    <div className='dashboard' style={{fontFamily:"Poppins",position:"relative"}}>
+      <HeadBarInformation/>
         <NavBar />
-        <HeadBarInformation/>
+        
         
         <div style={{display:"flex", flexWrap:"wrap", marginLeft:"250px"}}>
           {arrayToDisplay}
         </div>
     </div>
+  
   )
 }
 

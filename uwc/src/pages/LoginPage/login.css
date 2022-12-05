@@ -31,12 +31,7 @@
 }
 
 /* Textbox 9 */
-.textbox {
-    position: absolute; 
-    top: 104px; 
-    left: 29px; 
-    opacity: 1; 
-}
+
 .textbox .form-input {
     width: 90%; 
     height: 44px; 
@@ -59,10 +54,7 @@
     padding-left: 18px; 
 }
   /* hover */
-.textbox .form-input:hover {
-    color: #BCC1CAFF; /* neutral-400 */
-    background: #FFFFFFFF; /* white */
-}
+
   /* focused */
 .textbox input:focused {
     color: #BCC1CAFF; /* neutral-400 */
@@ -80,9 +72,6 @@
 
 
 .button {
-    position: absolute; 
-    top: 190px; 
-    left: 65px; 
     width: 359px; 
     height: 44px; 
     padding: 0 16px; 
