@@ -8,15 +8,15 @@ const mcpArray = [
     {
       id : "DC1231",
       location : "123 Hopskin Street",
-      status : "Assigned"
+      status : "Not Assigned"
     },{
       id : "HN1010",
       location : "89 Lolotino Street",
-      status : "Assigned"
+      status : "Not Assigned"
     },{
       id : "DM9801",
       location : "12 Alabama Street",
-      status : "Assigned"
+      status : "Not Assigned"
     },{
       id : "AB0101",
       location : "12/1/4 Robertson Street",
@@ -93,6 +93,20 @@ const RoutePlanningPage = ()=>{
     const [eighth, updateEigth]=useState(false)
     const [routeName,updateRouteName] = useState("Fill in route name")
 
+
+
+
+    const [firstEmp,updateFirstEmp] = useState(false)
+    const [secondEmp,updateSecondEmp]= useState(false)
+    const [thirdEmp,updateThirdEmp]= useState(false)
+    const [fourthEmp,updateFourthEmp]=useState(false)
+    const [fifthEmp,updateFifthEmp]=useState(false)
+    const [sixthEmp,updateSixthEmp]=useState(false)
+    const [seventhEmp,updateSeventhEmp]=useState(false)
+    
+
+
+
     const SingleChoseneComponent = (props)=>{
         return(
           <div style={{marginLeft:"5px",display:"flex", justifyContent:"center", alignItems:"center",width:"70px", height:"30px", borderRadius:"10px",border:"solid"}}>
@@ -156,7 +170,7 @@ const RoutePlanningPage = ()=>{
                 <div style={{backgroundImage:"url(https://cdn-icons-png.flaticon.com/512/32/32355.png)", width:"30px", height:"30px", backgroundSize:"cover", marginRight:"10px", cursor:"pointer"}}></div>
               </div>
               <div style={{display:"flex", alignItems:"center"}}>
-                <div style={{backgroundImage:"url(https://cdn-icons-png.flaticon.com/512/1345/1345874.png)", width:"30px", height:"30px", backgroundSize:"cover", marginRight:"10px", cursor:"pointer"}}></div>
+                <div style={{backgroundImage:"url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq9G1uBoukxRCRGKX88njBR0gycpn6MDWEdxdPqXiFhxx3ejDIw8tnHFdIQawMthkqoR0&usqp=CAU)", width:"30px", height:"30px", backgroundSize:"cover", marginRight:"10px", cursor:"pointer"}}></div>
               </div>
               <div style={{display:"flex", alignItems:"center"}}>
                 <div style={{backgroundImage:"url(https://cdn-icons-png.flaticon.com/512/14/14558.png)", width:"30px", height:"30px", backgroundSize:"cover", marginRight:"10px", cursor:"pointer"}}></div>
@@ -168,12 +182,90 @@ const RoutePlanningPage = ()=>{
     
     
         
-        const anotherArrayToDisplay = collectorArray.map((element)=>{
+        const anotherArrayToDisplay = collectorArray.map((element,index)=>{
           return(
             // <div style={{display:"flex", borderBottom:"solid", borderLeft:"solid", borderRight:"solid",borderRadius:"10px", width:"100%"}}>
             <Container>
               <div style={{width:"10%", height:"50px",display:"flex", alignItems:"center", justifyContent:"center"}}>
-                <input type="checkbox" style={{width:"20px", height:"20px"}}>
+                <input 
+                  checked={
+                    index===0? firstEmp  :
+                    index===1? secondEmp :
+                    index===2? thirdEmp :
+                    index===3? fourthEmp:
+                    index===4? fifthEmp:
+                    index===5? sixthEmp:
+                    seventhEmp             
+                  }
+                  onClick={()=>{
+                    if (index===0){
+                      updateFirstEmp(!firstEmp);
+                      updateSecondEmp(false);
+                      updateThirdEmp(false);
+                      updateFourthEmp(false);
+                      updateFifthEmp(false);
+                      updateSixthEmp(false);
+                      updateSeventhEmp(false);
+                    }
+                    
+                    if (index===1){
+                      updateSecondEmp(!secondEmp)
+                      updateFirstEmp(false);
+                      updateThirdEmp(false);
+                      updateFourthEmp(false);
+                      updateFifthEmp(false);
+                      updateSixthEmp(false);
+                      updateSeventhEmp(false);
+                    }
+                    if (index===2){
+                      updateThirdEmp(!thirdEmp);
+                      updateFirstEmp(false)
+                      updateSecondEmp(false)
+                      updateFourthEmp(false);
+                      updateFifthEmp(false);
+                      updateSixthEmp(false);
+                      updateSeventhEmp(false);
+                    }
+                    if (index===3){
+                      updateFourthEmp(!fourthEmp);
+                      updateFirstEmp(false)
+                      updateSecondEmp(false)
+                      updateThirdEmp(false);
+                      updateFifthEmp(false);
+                      updateSixthEmp(false);
+                      updateSeventhEmp(false);
+                    }
+                    if (index===4){
+                      updateFifthEmp(!fifthEmp);
+                      updateFirstEmp(false)
+                      updateSecondEmp(false)
+                      updateThirdEmp(false);
+                      updateFourthEmp(false);
+                      updateSixthEmp(false);
+                      updateSeventhEmp(false);
+                    }
+                    if (index===5){
+                      updateSixthEmp(!sixthEmp);
+                      updateFirstEmp(false)
+                      updateSecondEmp(false)
+                      updateThirdEmp(false);
+                      updateFourthEmp(false);
+                      updateFifthEmp(false);
+                      updateSeventhEmp(false);
+                    }
+                    if (index===6){
+                      updateSeventhEmp(!seventhEmp)
+                      updateFirstEmp(false)
+                      updateSecondEmp(false)
+                      updateThirdEmp(false);
+                      updateFourthEmp(false);
+                      updateFifthEmp(false);
+                      updateSixthEmp(false);
+                    }
+                    
+                    // isChosen[index]= !isChosen[index]
+                  }} 
+                type="checkbox" style={{width:"20px", height:"20px"}}>
                   
                 </input>
               </div>  
@@ -365,7 +457,48 @@ const RoutePlanningPage = ()=>{
               <button style={{position:"relative",right:"50px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"40px", fontFamily:"Poppins"}}>
                 Cancel
               </button>
-              <button onClick={()=>{alert("Assign Successfully")}} style={{position:"relative",right:"50px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"40px", backgroundColor:"dodgerblue", fontFamily:"Poppins"}}>
+              <button onClick={()=>{
+                for (let i =0;i<mcpArray.length;i++){
+                  if (i==0 && first === true){mcpArray[0].status = "Assigned"}
+                  if (i==1 && second === true){mcpArray[1].status = "Assigned"}
+                  if (i==2 && third === true){mcpArray[2].status = "Assigned"}
+                  if (i==3 && fourth === true){mcpArray[3].status = "Assigned"}
+                  if (i==4 && fifth === true){mcpArray[4].status = "Assigned"}
+                  if (i==5 && sixth === true){mcpArray[5].status = "Assigned"}
+                  if (i==6 && seventh === true){mcpArray[6].status = "Assigned"}
+                  if (i==7 && eighth === true){mcpArray[7].status = "Assigned"}
+                };
+
+                for (let i =0;i<collectorArray.length;i++){
+                  if (i==0 && firstEmp === true){collectorArray[0].status = "Unavailable"}
+                  if (i==1 && secondEmp === true){collectorArray[1].status = "Unavailable"}
+                  if (i==2 && thirdEmp === true){collectorArray[2].status = "Unavailable"}
+                  if (i==3 && fourthEmp === true){collectorArray[3].status = "Unavailable"}
+                  if (i==4 && fifthEmp === true){collectorArray[4].status = "Unavailable"}
+                  if (i==5 && sixthEmp === true){collectorArray[5].status = "Unavailable"}
+                  if (i==6 && seventhEmp === true){collectorArray[6].status = "Unavailable"}
+                };
+
+                updateFirst(false);
+                updateSecond(false);
+                updateThird(false);
+                updateFourth(false);
+                updateFifth(false);
+                updateSixth(false);
+                updateSeventh(false);
+                updateEigth(false);
+
+
+                updateSeventhEmp(false)
+                updateFirstEmp(false)
+                updateSecondEmp(false)
+                updateThirdEmp(false);
+                updateFourthEmp(false);
+                updateFifthEmp(false);
+                updateSixthEmp(false);
+
+
+                ;alert("Assign Successfully")}} style={{position:"relative",right:"50px",borderRadius:"5px",width:"100px", height:"50px", marginLeft:"40px", backgroundColor:"dodgerblue", fontFamily:"Poppins"}}>
                 Assign
               </button>
             </div>

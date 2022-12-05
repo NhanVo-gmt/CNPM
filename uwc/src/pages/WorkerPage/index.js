@@ -120,7 +120,7 @@ function WorkerPage() {
         <div style={{width:"20%", fontSize:"large"}}>
           <div style={{paddingLeft:"10px"}}>Name</div>
         </div>
-        <div style={{width:"40%", fontSize:"large", textAlign:"center"}}>Task Overview</div>
+        <div style={{width:"40%", fontSize:"large"}}>Task Overview</div>
         <div style={{width:"20%", fontSize:"large"}}>Role</div>
         <div style={{width:"20%", fontSize:"large"}}>Status</div>
         <div style={{width:"150px"}}></div>

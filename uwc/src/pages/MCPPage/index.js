@@ -108,14 +108,14 @@ function MCPPage() {
       <HeadBarInformation/>
 
       <div style={{display:"flex",justifyContent:"center", padding:"10px 0px", fontSize:"xx-large"}}>
-        <div>MCP INFOMATION</div>
+        <div>MCP INFORMATION</div>
       </div>
-      <div style={{display:"flex", backgroundColor:"gray", width:"calc(100% - 250px)", justifyContent:"end", padding:"10px 0px", border:"solid", borderRadius:"10px", marginLeft:"250px"}}>
+      <div style={{display:"flex", backgroundColor:"gray", width:"calc(100% - 250px)", padding:"10px 0px", border:"solid", borderRadius:"10px", marginLeft:"250px"}}>
         <div style={{width:"20%", fontSize:"large"}}>
-          <div style={{paddingLeft:"10px", position:"relative", left:"-50px"}}>Id</div>
+          <div style={{paddingLeft:"10px", position:"relative"}}>Id</div>
         </div>
-        <div style={{width:"40%", fontSize:"large", position:"relative", }}>Location</div>
-        <div style={{width:"20%", fontSize:"large", position:"relative", left:"-50px"}}>Status</div>
+        <div style={{width:"40%", fontSize:"large", position:"relative" }}>Location</div>
+        <div style={{width:"20%", fontSize:"large", position:"relative"}}>Status</div>
         <div style={{width:"150px"}}></div>
       </div>
       <div style={{width:"calc(100% - 250px)",marginLeft:"250px"}}>
