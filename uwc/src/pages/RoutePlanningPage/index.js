@@ -32,12 +32,12 @@ const mcpArray = [
     },{
       id : "LH1006",
       location : "Peery School",
-      status : "Not assigned"
+      status : "Not Assigned"
     },
     {
       id : "MN1000",
       location : "Hopskin School",
-      status : "Not assigned"
+      status : "Not Assigned"
     }
   ]
   
@@ -162,7 +162,10 @@ const RoutePlanningPage = ()=>{
             </div>
             <div style={{width:"20%", height:"50px",display:"flex", alignItems:"center"}}>
               <div>
-                {element.status}
+                {element.status === "Assigned" ? (<div style={{padding:"5px",backgroundColor:"dodgerblue", borderRadius:"10px", textAlign:"center"}}>{element.status}</div>):
+                (<div style={{padding:"5px",backgroundColor:"mint", width:"120px", borderRadius:"10px"}}>{element.status}</div>)}
+                
+                {/* {element.status} */}
               </div>
             </div>
             <div style={{width:"150px",height:"50px", display:"flex"}}>
@@ -282,7 +285,10 @@ const RoutePlanningPage = ()=>{
               </div>
               <div style={{width:"20%", height:"50px",display:"flex", alignItems:"center"}}>
                 <div>
-                  {element.status}
+                {element.status === "Unavailable" ? (<div style={{padding:"5px",backgroundColor:"dodgerblue", borderRadius:"10px", textAlign:"center"}}>{element.status}</div>):
+                (<div style={{padding:"5px",backgroundColor:"mint", width:"120px", borderRadius:"10px"}}>{element.status}</div>)}
+                
+                  {/* {element.status} */}
                 </div>
               </div>
               <div style={{width:"150px",height:"50px", display:"flex"}}>
@@ -459,24 +465,24 @@ const RoutePlanningPage = ()=>{
               </button>
               <button onClick={()=>{
                 for (let i =0;i<mcpArray.length;i++){
-                  if (i==0 && first === true){mcpArray[0].status = "Assigned"}
-                  if (i==1 && second === true){mcpArray[1].status = "Assigned"}
-                  if (i==2 && third === true){mcpArray[2].status = "Assigned"}
-                  if (i==3 && fourth === true){mcpArray[3].status = "Assigned"}
-                  if (i==4 && fifth === true){mcpArray[4].status = "Assigned"}
-                  if (i==5 && sixth === true){mcpArray[5].status = "Assigned"}
-                  if (i==6 && seventh === true){mcpArray[6].status = "Assigned"}
-                  if (i==7 && eighth === true){mcpArray[7].status = "Assigned"}
+                  if (i===0 && first === true){mcpArray[0].status = "Assigned"}
+                  if (i===1 && second === true){mcpArray[1].status = "Assigned"}
+                  if (i===2 && third === true){mcpArray[2].status = "Assigned"}
+                  if (i===3 && fourth === true){mcpArray[3].status = "Assigned"}
+                  if (i===4 && fifth === true){mcpArray[4].status = "Assigned"}
+                  if (i===5 && sixth === true){mcpArray[5].status = "Assigned"}
+                  if (i===6 && seventh === true){mcpArray[6].status = "Assigned"}
+                  if (i===7 && eighth === true){mcpArray[7].status = "Assigned"}
                 };
 
                 for (let i =0;i<collectorArray.length;i++){
-                  if (i==0 && firstEmp === true){collectorArray[0].status = "Unavailable"}
-                  if (i==1 && secondEmp === true){collectorArray[1].status = "Unavailable"}
-                  if (i==2 && thirdEmp === true){collectorArray[2].status = "Unavailable"}
-                  if (i==3 && fourthEmp === true){collectorArray[3].status = "Unavailable"}
-                  if (i==4 && fifthEmp === true){collectorArray[4].status = "Unavailable"}
-                  if (i==5 && sixthEmp === true){collectorArray[5].status = "Unavailable"}
-                  if (i==6 && seventhEmp === true){collectorArray[6].status = "Unavailable"}
+                  if (i===0 && firstEmp === true){collectorArray[0].status = "Unavailable"}
+                  if (i===1 && secondEmp === true){collectorArray[1].status = "Unavailable"}
+                  if (i===2 && thirdEmp === true){collectorArray[2].status = "Unavailable"}
+                  if (i===3 && fourthEmp === true){collectorArray[3].status = "Unavailable"}
+                  if (i===4 && fifthEmp === true){collectorArray[4].status = "Unavailable"}
+                  if (i===5 && sixthEmp === true){collectorArray[5].status = "Unavailable"}
+                  if (i===6 && seventhEmp === true){collectorArray[6].status = "Unavailable"}
                 };
 
                 updateFirst(false);
